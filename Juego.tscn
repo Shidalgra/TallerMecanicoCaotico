@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://byefae8c0kprw"]
+
+[ext_resource type="Script" uid="uid://clcl7w4gss8um" path="res://Juego.gd" id="1_0d2wr"]
+[ext_resource type="Texture2D" uid="uid://cscfwuw6xh7ti" path="res://images/BodegaSuplidora.png" id="2_bgojs"]
+
+[node name="Juego" type="Control" unique_id=2076501382]
+custom_minimum_size = Vector2(720, 1280)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0d2wr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1955031782]
+custom_minimum_size = Vector2(720, 1280)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = -245.91333
+theme_override_constants/separation = 10
+
+[node name="ZonaPedidos" type="Panel" parent="VBoxContainer" unique_id=1979405961]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="ContenedorFlotante" type="MarginContainer" parent="VBoxContainer" unique_id=728830663]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="FondoGrisHerramientas" type="PanelContainer" parent="VBoxContainer/ContenedorFlotante" unique_id=674821568]
+layout_mode = 2
+
+[node name="EstacionesTrabajo" type="GridContainer" parent="VBoxContainer/ContenedorFlotante/FondoGrisHerramientas" unique_id=881647174]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="MesaRepuestos" type="TextureButton" parent="VBoxContainer/ContenedorFlotante/FondoGrisHerramientas/EstacionesTrabajo" unique_id=122945191]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FondoBodega" type="TextureRect" parent="VBoxContainer/ContenedorFlotante/FondoGrisHerramientas/EstacionesTrabajo/MesaRepuestos" unique_id=164589421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bgojs")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BotonRepuesto" type="TextureButton" parent="VBoxContainer/ContenedorFlotante/FondoGrisHerramientas/EstacionesTrabajo/MesaRepuestos" unique_id=2041029665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MaquinaHidraulica" type="TextureButton" parent="VBoxContainer/ContenedorFlotante/FondoGrisHerramientas/EstacionesTrabajo" unique_id=2134103472]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+ignore_texture_size = true
+stretch_mode = 6
